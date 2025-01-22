@@ -1,0 +1,47 @@
+﻿<Window x:Class="WypozyczalniaGUI.DodajSprzetWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dodaj Sprzęt"
+        Height="350" Width="400"
+        WindowStartupLocation="CenterScreen" Background="#FAF3E0">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Nagłówek -->
+        <TextBlock Text="Dodaj Nowy Sprzęt" FontSize="18" FontWeight="Bold"
+                   HorizontalAlignment="Center" Margin="0,0,0,15" Grid.Row="0"/>
+
+        <!-- Rodzaj sprzętu -->
+        <TextBlock Text="Rodzaj Sprzętu:" Margin="0,29,0,38" Grid.RowSpan="3"/>
+        <ComboBox x:Name="RodzajComboBox" Grid.Row="1" Margin="0,5,0,15">
+            <ComboBoxItem Content="Narty"/>
+            <ComboBoxItem Content="Snowboard"/>
+        </ComboBox>
+
+        <!-- Typ sprzętu -->
+        <TextBlock Text="Typ (np. Freestyle, All Mountain):" Grid.Row="1" Margin="0,32,0,33" Grid.RowSpan="3"/>
+        <TextBox x:Name="TypSprzetuTextBox" Grid.Row="2" Margin="0,5,0,15"/>
+
+        <!-- Rozmiar sprzętu -->
+        <TextBlock Text="Rozmiar (cm):" Grid.Row="2" Margin="0,33,0,52" Grid.RowSpan="3"/>
+        <TextBox x:Name="RozmiarTextBox" Grid.Row="3" Margin="0,10,0,5"/>
+
+        <!-- Stan techniczny -->
+        <TextBlock Text="Stan Techniczny:" Grid.Row="4"/>
+        <TextBox x:Name="StanTextBox" Grid.Row="4" Margin="0,26,0,8"/>
+
+        <!-- Przycisk Dodaj -->
+        <Button Content="Dodaj" Grid.Row="6" HorizontalAlignment="Center" 
+                Width="150" Height="40" Background="#A8D5BA" Foreground="White"
+                FontSize="16" Click="Dodaj_Click" Margin="0,31,0,-31"/>
+    </Grid>
+</Window>
