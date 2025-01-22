@@ -5,7 +5,7 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("=== TEST SYSTEMU WYPOŻYCZALNI SPRZĘTU ===\n");
+        Console.WriteLine("kotek");
 
         // 1️⃣ Tworzenie menedżerów
         SprzetManager sprzetManager = new SprzetManager();
