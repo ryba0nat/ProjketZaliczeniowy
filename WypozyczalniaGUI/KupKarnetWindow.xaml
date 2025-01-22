@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WypozyczalniaGUI.KupKarnetWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Kup Karnet" Height="300" Width="350" Background="#FAF3E0">
+        Title="Kup Karnet" Height="300" Width="350" Background="#FAF3E0" Icon="/Mcdo-Design-Smooth-Leopard-Documents-Folder-Sakura.512.png">
 
     <Grid Margin="20,10,20,10">
         <Grid.RowDefinitions>

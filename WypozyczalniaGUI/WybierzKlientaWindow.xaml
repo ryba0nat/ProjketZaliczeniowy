@@ -4,7 +4,7 @@
         Title="Wybierz lub Dodaj Klienta"
         Height="350" Width="500"
         WindowStartupLocation="CenterScreen"
-        Background="#FAF3E0">
+        Background="#FAF3E0" Icon="/Mcdo-Design-Smooth-Leopard-Documents-Folder-Sakura.512.png">
 
     <Grid Margin="20">
         <Grid.RowDefinitions>

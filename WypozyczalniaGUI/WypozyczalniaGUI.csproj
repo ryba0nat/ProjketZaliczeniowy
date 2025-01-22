@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Mcdo-Design-Smooth-Leopard-Documents-Folder-Sakura.512.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Wypozyczalnia\Wypozyczalnia.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Mcdo-Design-Smooth-Leopard-Documents-Folder-Sakura.512.png" />
   </ItemGroup>
 
 </Project>

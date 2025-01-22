@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Dodaj Sprzęt"
         Height="350" Width="400"
-        WindowStartupLocation="CenterScreen" Background="#FAF3E0">
+        WindowStartupLocation="CenterScreen" Background="#FAF3E0" Icon="/Mcdo-Design-Smooth-Leopard-Documents-Folder-Sakura.512.png">
 
     <Grid Margin="20">
         <Grid.RowDefinitions>

@@ -5,7 +5,7 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("kotek");
+        //Console.WriteLine("kotek");
 
         // 1️⃣ Tworzenie menedżerów
         SprzetManager sprzetManager = new SprzetManager();
