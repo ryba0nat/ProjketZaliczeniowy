@@ -4,7 +4,14 @@ using System.IO;
 using System.Xml.Serialization;
 namespace WypozyczalniaSprzetu
 {
-    public class SprzetManager
+    public class NieprawidlowyIndeksException : Exception
+    {
+       
+
+        public NieprawidlowyIndeksException(string message)
+            : base(message) { }
+    }
+        public class SprzetManager
     {
         private static readonly string SciezkaPliku = "sprzet.xml";// zmiana !!!
         public List<SprzetNarciarski> ListaSprzetu { get; } = new List<SprzetNarciarski>();
@@ -15,17 +22,18 @@ namespace WypozyczalniaSprzetu
             //ZapiszSprzet(); // zmiana
         }
 
-        
+
 
         public void UsunSprzet(int indeks)
         {
             if (indeks < 0 || indeks >= ListaSprzetu.Count)
             {
-                throw new ArgumentOutOfRangeException(nameof(indeks), "Nieprawidłowy indeks.");
+                throw new NieprawidlowyIndeksException($"Podano nieprawidłowy indeks: {indeks}. Dostępny zakres: 0 - {ListaSprzetu.Count - 1}.");
             }
 
             ListaSprzetu.RemoveAt(indeks);
         }
+
 
         public List<SprzetNarciarski> FiltrujDostepny()
         {

@@ -2,11 +2,29 @@
 
 namespace WypozyczalniaSprzetu
 {
-    public class Klient
+
+    public class NieprawidlowyPeselException : Exception
     {
+        public NieprawidlowyPeselException(string message)
+            : base(message) { }
+    }
+        public class Klient
+    {
+        private string pesel;
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
-        public string PESEL { get; set; }
+        public string PESEL
+        {
+            get => pesel;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value) || value.Length != 11)
+                {
+                    throw new NieprawidlowyPeselException($"PESEL musi mieć dokładnie 11 znaków. Podano: {value}");
+                }
+                pesel = value;
+            }
+        }
         public List<Wypozyczenie> HistoriaWypozyczen { get; } = new List<Wypozyczenie>();
         public List<Karnet> HistoriaKarnetow { get; } = new List<Karnet>();
 
